@@ -147,10 +147,14 @@ void inserirElemento()
 }
 
 
-// funções a serem implementadas no exericio
+// funÃ§Ãµes a serem implementadas no exericio
 void exibirReverso()
 {
-
+	NO* think = ultimo;
+	while (think != NULL) {
+		cout << think->valor << endl;
+		think = think->ant;
+	}
 }
 
 void excluirPrimeiroElemento()
