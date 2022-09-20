@@ -168,7 +168,23 @@ void excluirPrimeiroElemento()
 
 void excluirUltimoElemento()
 {
-
+	NO* aux = primeiro;
+	NO* lasthink = ultimo;
+	if (aux != NULL) {
+		if (aux->prox == NULL) {
+			aux = NULL;
+			lasthink = NULL;
+		}
+		else {
+			while (aux->prox->prox != NULL)
+				aux = aux->prox;
+				aux->prox = NULL;
+				ultimo = aux;
+				free(aux->prox);
+				cout << "Excluido" << endl;
+			
+		}
+	}	
 }
 
 
