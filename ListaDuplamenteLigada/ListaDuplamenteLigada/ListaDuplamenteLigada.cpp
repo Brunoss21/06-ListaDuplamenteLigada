@@ -159,7 +159,11 @@ void exibirReverso()
 
 void excluirPrimeiroElemento()
 {
-
+	NO* aux = primeiro;
+	aux->ant = NULL;
+	aux->valor = aux->prox->valor;
+	aux->prox = aux->prox->prox;
+	cout << "O elemento foi excluido" << endl;
 }
 
 void excluirUltimoElemento()
